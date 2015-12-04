@@ -6,8 +6,31 @@ var sinonChai = require("sinon-chai");
 var expect = chai.expect;
 chai.use(sinonChai);
 
-var main = require("../lib/main.js");
+var main=require("../lib/main.js");
 
+describe('add(a,b)',function(){
+
+    var a=1;
+    var b=2;
+
+    it('a与b相加',function(){
+
+        var result=main(a,b);
+
+        expect(result).to.equal(3);
+
+    });
+});
+/*
+"use strict";
+var _ = require("lodash");
+var chai = require("chai");
+var sinon = require("sinon");
+var sinonChai = require("sinon-chai");
+var expect = chai.expect;
+chai.use(sinonChai);
+
+var main = require("../lib/main.js");
 
 describe("测试描述", function(){
     sinon.spy(console, 'log');
@@ -29,3 +52,4 @@ describe("测试描述", function(){
         expect(expect_string).to.equal(result);
     });
 });
+*/
